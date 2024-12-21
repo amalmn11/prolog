@@ -1,0 +1,2 @@
+maxliste(E,[E]).
+maxliste(K,[M,N|L]):-maxliste(K,[N|L]).

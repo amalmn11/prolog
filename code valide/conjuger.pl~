@@ -1,0 +1,10 @@
+supprimer([_,_],[]).
+supprimer([H|L],[H|R]):-supprimer(L,R).
+
+concatener([],L,L).
+concatener([H|L1],L2,[H|R]):-concatener(L1,L2,R).
+
+conjuger([],[]).
+conjuger(L,1,singulier,R):-max(L,M),supprimer_1_occ(M,L,L1),conjuger(L1,R1),inserer_fin(M,R1,R).
+
+
